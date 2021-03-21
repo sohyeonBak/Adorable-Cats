@@ -18,7 +18,13 @@ class CatFetch{
     }
 
     async pickCat(){
-        const response = await fetch("https://api.thecatapi.com/v1/images/search?breed_ids=beng&limit=8", this.requestOptions)
+        const response = await fetch("https://api.thecatapi.com/v1/images/search?breed_ids=abys&limit=8", this.requestOptions)
+        const result = await response.json();
+        return result;
+    }
+
+    async pickChangeCat(query){
+        const response = await fetch(`https://api.thecatapi.com/v1/images/search?breed_ids=${query}&limit=8`, this.requestOptions)
         const result = await response.json();
         return result;
     }

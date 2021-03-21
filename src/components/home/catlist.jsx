@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CatContents from './catcontents';
+import CatPicture from './catpicture';
 
-const CatList = ({catname, catimage}) => {
+const CatList = ({onCatsList, onCatImage, onImage}) => {
+    const [catData, setCatData] = useState({
+        origin : "Egypt",
+        name : "Abyssinian",
+        description : "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
+        temperament: "Active, Energetic, Independent, Intelligent, Gentle"
+    });
+    
 
+    
     return(
         <div>
-            <button></button>
+            <button>{catData.name}</button>
             <ul>
-                {catname.map(cat=>(
-                    <li key={cat.id}><button>{cat.name}</button></li>
-                ))}
+                {onCatsList.map(cats=>
+                    <CatContents key={cats.id} cats={cats} catData={catData} setCatData={setCatData} onImage={onImage} />
+                )}
             </ul>
-            <CatContents catimage={catimage} />
+            <ul>
+                {onCatImage.map(image=>
+                    <CatPicture key={image.id} catImage={image} />
+                )}
+            </ul>
+            <div>
+                <p>{catData.origin}</p>
+                <h3>{catData.name}</h3>
+                <p>{catData.description}</p>
+                <em>{catData.temperament}</em>
+            </div>
         </div>
     )}
 

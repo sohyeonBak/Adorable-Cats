@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useHistory } from 'react-router';
 
-const Header = (props) => {
+const Header = ({historyState}) => {
+    const history = useHistory();
+
+    const onLoginClick = useCallback((e) =>{
+        if(historyState===undefined){
+            history.push({
+                pathname : '/login'
+            })
+        }else if(historyState!==undefined){
+            history.push({
+                pathname : '/'
+            })
+        }
+    },[])
+    
     return(
-         <div>
+         <header>
             <h1>Adorable Cats</h1>
-            <span>Log in</span>
+            <span onClick={onLoginClick}>{historyState===undefined?"Log in" : "Log out"}</span>
             <span className="material-icons">perm_identity</span>
-         </div>       
+         </header>       
     )}
 
 export default Header;

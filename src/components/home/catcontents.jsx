@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 
-const CatContents = ({cats, catData, setCatData, onImage}) => {
-   
+const CatContents = ({cats, setCatData, onImage, setListButton}) => {
+    
     const handlerImage = () => {
         const value = cats.id
         onImage(value)
@@ -9,13 +9,12 @@ const CatContents = ({cats, catData, setCatData, onImage}) => {
 
     const onClick = useCallback(()=>{
         setCatData({
-            ...catData,
-            origin : cats.origin,
-            name : cats.name,
-            description : cats.description,
-            temperament : cats.temperament})
+            ...cats,
+            })
         handlerImage()
-    },[setCatData, handlerImage])
+        setListButton(false)
+        
+    },[setCatData, cats, handlerImage, setListButton])
 
    
     return(

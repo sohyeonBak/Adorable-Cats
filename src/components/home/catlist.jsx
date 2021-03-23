@@ -1,28 +1,34 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import CatContents from './catcontents';
 import CatPicture from './catpicture';
+import LoginModal from './loginmodal';
 
-const CatList = ({onCatsList, onCatImage, onImage}) => {
+const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, addLikedImage}) => {
     const [catData, setCatData] = useState({
         origin : "Egypt",
         name : "Abyssinian",
         description : "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
         temperament: "Active, Energetic, Independent, Intelligent, Gentle"
     });
+    const [ listButton, setListButton ] = useState(false);
+    const [ alretModal, setAlretedModal ] = useState(false);
     
+    const onListClick = useCallback(()=>{
+        setListButton(true)
+    },[])
 
-    
     return(
+        <>
         <div>
-            <button>{catData.name}</button>
-            <ul>
+            <button onClick={onListClick}>{catData.name}</button>
+            {listButton&&<ul>
                 {onCatsList.map(cats=>
-                    <CatContents key={cats.id} cats={cats} catData={catData} setCatData={setCatData} onImage={onImage} />
+                    <CatContents key={cats.id} cats={cats} catData={catData} setCatData={setCatData} onImage={onImage} setListButton={setListButton} />
                 )}
-            </ul>
+            </ul>}
             <ul>
                 {onCatImage.map(image=>
-                    <CatPicture key={image.id} catImage={image} />
+                    <CatPicture key={image.id} catImage={image} setAlretedModal={setAlretedModal} onHistoryState={onHistoryState} addLikedImage={addLikedImage} />
                 )}
             </ul>
             <div>
@@ -32,6 +38,8 @@ const CatList = ({onCatsList, onCatImage, onImage}) => {
                 <em>{catData.temperament}</em>
             </div>
         </div>
+        {alretModal&&<LoginModal setAlretedModal={setAlretedModal} />}
+        </>
     )}
 
 export default CatList;

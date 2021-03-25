@@ -3,7 +3,7 @@ import CatContents from './catcontents';
 import CatPicture from './catpicture';
 import LoginModal from './loginmodal';
 
-const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, addLikedImage}) => {
+const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, like, setLike }) => {
     const [catData, setCatData] = useState({
         origin : "Egypt",
         name : "Abyssinian",
@@ -23,12 +23,26 @@ const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, addLikedImage
             <button onClick={onListClick}>{catData.name}</button>
             {listButton&&<ul>
                 {onCatsList.map(cats=>
-                    <CatContents key={cats.id} cats={cats} catData={catData} setCatData={setCatData} onImage={onImage} setListButton={setListButton} />
+                    <CatContents 
+                        key={cats.id} 
+                        cats={cats} 
+                        catData={catData} 
+                        setCatData={setCatData} 
+                        onImage={onImage} 
+                        setListButton={setListButton} 
+                    />
                 )}
             </ul>}
             <ul>
                 {onCatImage.map(image=>
-                    <CatPicture key={image.id} catImage={image} setAlretedModal={setAlretedModal} onHistoryState={onHistoryState} addLikedImage={addLikedImage} />
+                    <CatPicture 
+                        key={image.id} 
+                        catImage={image} 
+                        setAlretedModal={setAlretedModal} 
+                        onHistoryState={onHistoryState}
+                        like={like} 
+                        setLike={setLike}
+                    />
                 )}
             </ul>
             <div>

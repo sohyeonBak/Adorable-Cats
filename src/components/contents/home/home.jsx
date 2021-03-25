@@ -1,11 +1,16 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useHistory } from 'react-router';
-import Header from '../header';
+import { Route, useHistory, useRouteMatch } from 'react-router';
+
 import CatList from './catlist';
 
-const Home = ({catfetch, onCatsList, addLikedImage}) => {
+
+const Home = ({catfetch, onHistoryState, like, setLike }) => {
+    const [ initCats, setInitCats ] = useState([]);
     const [ initImage, setInitImage ] = useState([]);
-    const historyState = useHistory().location.state;
+
+    useEffect(()=>{
+        catfetch.cat().then(initCats=>setInitCats(initCats))
+      },[catfetch]);
 
     useEffect(()=>{
         catfetch.pickCat().then(initImage => setInitImage(initImage))
@@ -17,14 +22,16 @@ const Home = ({catfetch, onCatsList, addLikedImage}) => {
 
     return(
         <>
-            <Header historyState={historyState} />
+            
             <CatList 
-                onCatsList={onCatsList} 
+                onCatsList={initCats} 
                 onImage={onImage} 
                 onCatImage={initImage}
-                onHistoryState={historyState}
-                addLikedImage={addLikedImage}
+                onHistoryState={onHistoryState}
+                like={like} 
+                setLike={setLike}
             />
+            
         </>
     )
 }

@@ -1,17 +1,16 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
-const CatPicture = ({catImage, setAlretedModal, onHistoryState, addLikedImage}) => {
-    const [ like, setLike ] = useState('favorite_border')
-    const [ likedImage, setLikedImage ] = useState(catImage.id)
-    
+const CatPicture = ({catImage, setAlretedModal, onHistoryState, like, setLike }) => {
+
     const onModalClick = useCallback((e)=>{
         if(onHistoryState===undefined){
             setAlretedModal(true)
         }else if(onHistoryState.id){
             setLike('favorite')
-            addLikedImage(likedImage)
         }    
-    },[])
+    },[setLike])
+
+    
 
     return(
         <li>

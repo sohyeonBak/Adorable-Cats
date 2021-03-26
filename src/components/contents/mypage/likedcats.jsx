@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-const LikedCats = () => {
-    
+const LikedCats = ({imagesCats}) => {
+
     return(
-       <div>
-           <h1>Mypage</h1>
-       </div>     
+       <li>
+           <img src={imagesCats.url} alt=""/>
+       </li>   
     )}
 
 export default LikedCats;

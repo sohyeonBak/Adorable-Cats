@@ -3,7 +3,7 @@ import CatContents from './catcontents';
 import CatPicture from './catpicture';
 import LoginModal from './loginmodal';
 
-const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, like, setLike }) => {
+const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, onLikeImage, like, setLike }) => {
     const [catData, setCatData] = useState({
         origin : "Egypt",
         name : "Abyssinian",
@@ -40,6 +40,7 @@ const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, like, setLike
                         catImage={image} 
                         setAlretedModal={setAlretedModal} 
                         onHistoryState={onHistoryState}
+                        onLikeImage={onLikeImage}
                         like={like} 
                         setLike={setLike}
                     />

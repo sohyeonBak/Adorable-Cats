@@ -1,21 +1,23 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
-const CatPicture = ({catImage, setAlretedModal, onHistoryState, like, setLike }) => {
-
+const CatPicture = ({catImage, setAlretedModal, onHistoryState, like, onLikeImage }) => {
+    const [pickedLikey, setPickedLikey] = useState('favorite_border')
+    
     const onModalClick = useCallback((e)=>{
         if(onHistoryState===undefined){
             setAlretedModal(true)
-        }else if(onHistoryState.id){
-            setLike('favorite')
-        }    
-    },[setLike])
+        } else {
+            setPickedLikey('favorite')
+        }
+        onLikeImage(catImage.id)
+    },[onHistoryState,setAlretedModal])
 
     
-
+    
     return(
-        <li>
-            <span className="material-icons" onClick={onModalClick} >{like}</span>
-            <img src={catImage.url} alt={catImage.breeds.id}  />
+        <li >
+            <span className="material-icons" onClick={onModalClick} >{onHistoryState===undefined ? `${like}`: `${pickedLikey}` }</span>
+            <img src={catImage.url} alt={catImage.breeds.id} />
         </li>    
     );}
 

@@ -9,8 +9,10 @@ const Contents = ({catfetch}) => {
     const {path, url} = useRouteMatch()
     const history = useHistory();
     const historyState = useHistory().location.state
+
     const [showMyPage, setShowMyPage] = useState(false)
-    const [ like, setLike ] = useState('favorite_border')
+    const [ like, setLike ] = useState('favorite_border');
+    const [ pickedImage, setPickedImage ] = useState([])
     
     useEffect(()=>{
         if(historyState===undefined){
@@ -18,7 +20,7 @@ const Contents = ({catfetch}) => {
         }else if(historyState!==undefined){
             setShowMyPage(true)
         }
-    },[])
+    },[historyState])
 
     const onLoginClick = useCallback((e) =>{
         if(historyState===undefined){
@@ -41,9 +43,18 @@ const Contents = ({catfetch}) => {
             pathname: '/home',
             state : historyState
         })
-    },[])
+        
+    },[history,historyState])
+
+    const onLikeImage = useCallback((query)=>{
+        catfetch.likedCat(query).then(pickedImage => setPickedImage(saveImage=>{
+            const saveCats = [...saveImage]
+            saveCats.push(pickedImage[0])
+            return saveCats;
+        }))
+    },[catfetch])
     
-    console.log(historyState)
+    console.log(pickedImage)
     return(
         <>  
             <header>
@@ -52,14 +63,15 @@ const Contents = ({catfetch}) => {
                 {showMyPage&&
                     <Link to={{
                         pathname:`${url}/mypage`,
-                        state : historyState
+                        state : historyState, pickedImage
+
                     }}>
                         <span className="material-icons">perm_identity</span>
                     </Link>
                 }
             </header>
             <Route exact path={path}>
-                <Home catfetch={catfetch} onHistoryState={historyState} like={like} setLike={setLike} />
+                <Home catfetch={catfetch} onHistoryState={historyState} onLikeImage={onLikeImage} like={like} setLike={setLike} />
             </Route>
             <Route path={`${path}/:id`} >
                 <MyPage />

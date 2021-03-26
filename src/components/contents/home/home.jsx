@@ -1,10 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Route, useHistory, useRouteMatch } from 'react-router';
 
 import CatList from './catlist';
 
 
-const Home = ({catfetch, onHistoryState, like, setLike }) => {
+const Home = ({catfetch, onHistoryState,onLikeImage, like, setLike }) => {
     const [ initCats, setInitCats ] = useState([]);
     const [ initImage, setInitImage ] = useState([]);
 
@@ -30,6 +29,7 @@ const Home = ({catfetch, onHistoryState, like, setLike }) => {
                 onHistoryState={onHistoryState}
                 like={like} 
                 setLike={setLike}
+                onLikeImage={onLikeImage}
             />
             
         </>

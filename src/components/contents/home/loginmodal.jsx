@@ -5,7 +5,7 @@ const LoginModal = ({setAlretedModal}) => {
     const history = useHistory();
     const onCancelModal = useCallback(()=>{
         setAlretedModal(false)
-    },[])
+    },[setAlretedModal])
 
     const onLoginClick = () => {
         history.push({

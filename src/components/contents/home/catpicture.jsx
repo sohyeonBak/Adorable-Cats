@@ -10,14 +10,14 @@ const CatPicture = ({catImage, setAlretedModal, onHistoryState, like, onLikeImag
             setPickedLikey('favorite')
         }
         onLikeImage(catImage.id)
-    },[onHistoryState,setAlretedModal])
+    },[onHistoryState,setAlretedModal,onLikeImage,catImage.id])
 
-    
     
     return(
         <li >
-            <span className="material-icons" onClick={onModalClick} >{onHistoryState===undefined ? `${like}`: `${pickedLikey}` }</span>
             <img src={catImage.url} alt={catImage.breeds.id} />
+            <span className="material-icons like" onClick={onModalClick} >{onHistoryState===undefined ? `${like}`: `${pickedLikey}` }</span>
+        
         </li>    
     );}
 

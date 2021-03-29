@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import CatContents from './catcontents';
 import CatPicture from './catpicture';
 import LoginModal from './loginmodal';
+import '../../../scss/home.scss'
 
 const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, onLikeImage, like, setLike }) => {
     const [catData, setCatData] = useState({
@@ -17,23 +18,37 @@ const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, onLikeImage, 
         setListButton(true)
     },[])
 
+    console.log(Math.floor(onCatImage.length/2))
+
     return(
-        <>
-        <div>
-            <button onClick={onListClick}>{catData.name}</button>
-            {listButton&&<ul>
-                {onCatsList.map(cats=>
-                    <CatContents 
-                        key={cats.id} 
-                        cats={cats} 
-                        catData={catData} 
-                        setCatData={setCatData} 
-                        onImage={onImage} 
-                        setListButton={setListButton} 
-                    />
-                )}
-            </ul>}
-            <ul>
+        <section>
+        <div className="catlistBtn">
+            <p>Choice  your cats!</p>
+            <button className="listBtn" onClick={onListClick}>
+                <em>{catData.name}</em>
+                <span class="material-icons">
+                    arrow_drop_down
+                </span>
+            </button>   
+            <div className="listOption">
+                {listButton&&
+                <ul className="options">
+                    {onCatsList.map(cats=>
+                        <CatContents 
+                            key={cats.id} 
+                            cats={cats} 
+                            catData={catData} 
+                            setCatData={setCatData} 
+                            onImage={onImage} 
+                            setListButton={setListButton} 
+                        />
+                    )}
+                </ul>}
+            </div>         
+        </div>
+        
+        <div className="catpicturelist">
+            <ul className="catslist" >
                 {onCatImage.map(image=>
                     <CatPicture 
                         key={image.id} 
@@ -46,15 +61,19 @@ const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, onLikeImage, 
                     />
                 )}
             </ul>
-            <div>
-                <p>{catData.origin}</p>
-                <h3>{catData.name}</h3>
-                <p>{catData.description}</p>
-                <em>{catData.temperament}</em>
+        </div>
+
+        <div className="catsubscribe">
+            <div className="catscontents">
+                <p className="origin">{catData.origin}</p>
+                <h3 className="name">{catData.name}</h3>
+                <p className="subs">{catData.description}</p>
+                <em className="tempt">{catData.temperament}</em>
             </div>
+            
         </div>
         {alretModal&&<LoginModal setAlretedModal={setAlretedModal} />}
-        </>
+        </section>
     )}
 
 export default CatList;

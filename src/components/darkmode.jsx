@@ -1,8 +1,11 @@
 import React from 'react';
+import '../scss/darkmode.scss'
 
 const DarkMode = (props) => {
     return(
-         <button></button>       
+        <div className="darkmode">
+            <button className="darkmodeBtn">🌙 Dark Mode</button>       
+        </div>
     )
 }
 

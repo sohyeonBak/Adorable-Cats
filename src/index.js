@@ -4,6 +4,7 @@ import App from './App';
 import AuthService from './service/auth_service';
 import CatFetch from './service/thecat_api';
 
+
 const catfetch = new CatFetch()
 const authservice = new AuthService();
 ReactDOM.render(

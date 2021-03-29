@@ -2,15 +2,14 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import DarkMode from './components/darkmode'
 import Login from './components/login/login'
 import Contents from "./components/contents/contents";
-
+import './App.scss'
 
 
 function App({catfetch, authservice}) {
   
 
   return(
-    <div class="App">
-      <DarkMode />
+    <div className="App">
       <BrowserRouter>
         <Switch>
           <Route path="/home" >
@@ -21,6 +20,8 @@ function App({catfetch, authservice}) {
           </Route>
         </Switch>
       </BrowserRouter>
+      <DarkMode />
+
     </div>
   )
 }

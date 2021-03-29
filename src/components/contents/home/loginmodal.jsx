@@ -13,11 +13,11 @@ const LoginModal = ({setAlretedModal}) => {
         })
     }
     return(
-        <div>
-            <div>
-                <p>You need to login if you want to save this picture. </p>
-                <button onClick={onCancelModal}>No, Thanks</button>
-                <button onClick={onLoginClick}>Log in</button>
+        <div className="alretModal">
+            <div className="modalcontents">
+                <p>You need to login<br />if you want to save this picture. </p>
+                <button className="nologin" onClick={onCancelModal}>No, Thanks</button>
+                <button className="onlogin" onClick={onLoginClick}>Log in</button>
             </div>
         </div>       
     )}

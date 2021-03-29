@@ -3,7 +3,7 @@ import { Route, useHistory, useRouteMatch } from 'react-router';
 import { Link } from 'react-router-dom';
 import Home from './home/home';
 import MyPage from './mypage/mypage';
-
+import '../../scss/header.scss';
 
 const Contents = ({catfetch}) => {
     const {path, url} = useRouteMatch()
@@ -54,21 +54,22 @@ const Contents = ({catfetch}) => {
         }))
     },[catfetch])
     
-    console.log(pickedImage)
     return(
         <>  
             <header>
-                <h1 onClick={onHomeClick}>Adorable Cats</h1>
-                <span onClick={onLoginClick}>{historyState===undefined?"Log in" : "Log out"}</span>
-                {showMyPage&&
-                    <Link to={{
-                        pathname:`${url}/mypage`,
-                        state : historyState, pickedImage
+                <div className="header">
+                    <h1 className="mainTitle" onClick={onHomeClick}>Adorable Cats</h1>
+                    <span className="login" onClick={onLoginClick}>{historyState===undefined?"Log in" : "Log out"}</span>
+                    {showMyPage&&
+                        <Link className="personalPage" to={{
+                            pathname:`${url}/mypage`,
+                            state : historyState, pickedImage
 
-                    }}>
-                        <span className="material-icons">perm_identity</span>
-                    </Link>
-                }
+                        }}>
+                            <span className="material-icons personal ">perm_identity</span>
+                        </Link>
+                    }
+                </div>
             </header>
             <Route exact path={path}>
                 <Home catfetch={catfetch} onHistoryState={historyState} onLikeImage={onLikeImage} like={like} setLike={setLike} />

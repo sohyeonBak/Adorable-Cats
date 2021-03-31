@@ -45,15 +45,17 @@ const Contents = ({catfetch}) => {
         })
         
     },[history,historyState])
-
-    const onLikeImage = useCallback((query)=>{
-        catfetch.likedCat(query).then(pickedImage => setPickedImage(saveImage=>{
-            const saveCats = [...saveImage]
-            saveCats.push(pickedImage[0])
-            return saveCats;
-        }))
-    },[catfetch])
     
+    const lovecat = (cat) =>{
+        setPickedImage(cats => {
+            const choice = [...cats]
+            choice.push(cat)
+            return choice
+            })
+    }
+    
+    
+
     return(
         <>  
             <header>
@@ -72,7 +74,14 @@ const Contents = ({catfetch}) => {
                 </div>
             </header>
             <Route exact path={path}>
-                <Home catfetch={catfetch} onHistoryState={historyState} onLikeImage={onLikeImage} like={like} setLike={setLike} />
+                <Home 
+                    catfetch={catfetch} 
+                    onHistoryState={historyState} 
+                    like={like} 
+                    setLike={setLike} 
+                    setPickedImage={setPickedImage}
+                    lovecat={lovecat}
+                    />
             </Route>
             <Route path={`${path}/:id`} >
                 <MyPage />

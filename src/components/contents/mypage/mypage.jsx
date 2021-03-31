@@ -1,22 +1,36 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { useHistory } from 'react-router';
-import LikedCats from './likedcats';
 import '../../../scss/mypage.scss'
+import CatDetail from './catdetail';
+import LikedCatList from './likedcatlist';
 
 const MyPage = () => {
-    
     const catsHistory = useHistory().location.pickedImage
+    const [ listStyle, setListStyle ] = useState(null)
 
+    const selected = (cats) => {
+        setListStyle(cats)
+    }
+    console.log(listStyle)
     return( 
-        <div className="saveimage">
+        <section className="saveimage">
             <div className="imagecontents">
                 <h2>Adorable my cats</h2>
-                <ul className="catimage">
-                {catsHistory&&catsHistory.map(images=><LikedCats key={images.id} imagesCats={images}/>)}
-                </ul>
+                <div className="likezone">
+                    {listStyle&&(
+                        <CatDetail 
+                            selectedCats={listStyle}
+                            selected={selected}
+                        />
+                    )}
+                    <LikedCatList 
+                        catsHistory={catsHistory} 
+                        onClickCat={selected}
+                        display={listStyle ? 'grid' : 'list'} 
+                    />
+                </div>
             </div>
-            
-        </div>
+        </section>
 
     )}
 

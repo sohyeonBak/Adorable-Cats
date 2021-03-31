@@ -1,14 +1,12 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 
-const LikedCats = ({imagesCats}) => {
-    
-    const onlistImage = useCallback(()=>{
-
-    },[])
+const LikedCats = ({imagesCats, onClickCat, display}) => {
+    const displayType = (display) === 'list' ? 'catsgrid' : 'catslist'
     
     return(
-       <li onClick={onlistImage}>
+       <li className={displayType} onClick={()=>{onClickCat(imagesCats)}}>
            <img src={imagesCats.url} alt=""/>
+           <span>{imagesCats.breeds[0].name}</span>
        </li>   
     )}
 

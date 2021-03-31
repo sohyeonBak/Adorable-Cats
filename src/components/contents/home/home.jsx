@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import CatList from './catlist';
 
 
-const Home = ({catfetch, onHistoryState,onLikeImage, like, setLike }) => {
+const Home = ({catfetch, onHistoryState, like, setLike, lovecat }) => {
     const [ initCats, setInitCats ] = useState([]);
     const [ initImage, setInitImage ] = useState([]);
 
@@ -11,6 +11,9 @@ const Home = ({catfetch, onHistoryState,onLikeImage, like, setLike }) => {
         catfetch.cat().then(initCats=>setInitCats(initCats))
       },[catfetch]);
 
+      useEffect(()=>{
+          return () => setInitCats(false)
+      },[])
     useEffect(()=>{
         catfetch.pickCat().then(initImage => setInitImage(initImage))
     },[catfetch])
@@ -29,7 +32,7 @@ const Home = ({catfetch, onHistoryState,onLikeImage, like, setLike }) => {
                 onHistoryState={onHistoryState}
                 like={like} 
                 setLike={setLike}
-                onLikeImage={onLikeImage}
+                lovecat={lovecat}
             />
             
         </>

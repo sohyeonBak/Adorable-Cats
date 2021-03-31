@@ -4,7 +4,7 @@ import CatPicture from './catpicture';
 import LoginModal from './loginmodal';
 import '../../../scss/home.scss'
 
-const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, onLikeImage, like, setLike }) => {
+const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, like, setLike, lovecat }) => {
     const [catData, setCatData] = useState({
         origin : "Egypt",
         name : "Abyssinian",
@@ -18,7 +18,11 @@ const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, onLikeImage, 
         setListButton(true)
     },[])
 
-    console.log(Math.floor(onCatImage.length/2))
+    
+    const handlerCats = (image) => {
+        lovecat(image)
+    }
+    
 
     return(
         <section>
@@ -55,9 +59,9 @@ const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, onLikeImage, 
                         catImage={image} 
                         setAlretedModal={setAlretedModal} 
                         onHistoryState={onHistoryState}
-                        onLikeImage={onLikeImage}
                         like={like} 
                         setLike={setLike}
+                        handlerCats={handlerCats}
                     />
                 )}
             </ul>

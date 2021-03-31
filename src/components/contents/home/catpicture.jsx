@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 
-const CatPicture = ({catImage, setAlretedModal, onHistoryState, like, onLikeImage }) => {
+const CatPicture = ({catImage, setAlretedModal, onHistoryState, like, handlerCats }) => {
     const [pickedLikey, setPickedLikey] = useState('favorite_border')
     
     const onModalClick = useCallback((e)=>{
@@ -9,15 +9,15 @@ const CatPicture = ({catImage, setAlretedModal, onHistoryState, like, onLikeImag
         } else {
             setPickedLikey('favorite')
         }
-        onLikeImage(catImage.id)
-    },[onHistoryState,setAlretedModal,onLikeImage,catImage.id])
+        
+        handlerCats(catImage)
+    },[onHistoryState, setAlretedModal, handlerCats, catImage])
 
     
     return(
         <li >
             <img src={catImage.url} alt={catImage.breeds.id} />
             <span className="material-icons like" onClick={onModalClick} >{onHistoryState===undefined ? `${like}`: `${pickedLikey}` }</span>
-        
         </li>    
     );}
 

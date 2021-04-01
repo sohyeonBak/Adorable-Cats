@@ -5,7 +5,7 @@ import Home from './home/home';
 import MyPage from './mypage/mypage';
 import '../../scss/header.scss';
 
-const Contents = ({catfetch}) => {
+const Contents = ({catfetch, listButton, setListButton, styleDark}) => {
     const {path, url} = useRouteMatch()
     const history = useHistory();
     const historyState = useHistory().location.state
@@ -58,7 +58,7 @@ const Contents = ({catfetch}) => {
 
     return(
         <>  
-            <header>
+            <header >
                 <div className="header">
                     <h1 className="mainTitle" onClick={onHomeClick}>Adorable Cats</h1>
                     <span className="login" onClick={onLoginClick}>{historyState===undefined?"Log in" : "Log out"}</span>
@@ -81,10 +81,12 @@ const Contents = ({catfetch}) => {
                     setLike={setLike} 
                     setPickedImage={setPickedImage}
                     lovecat={lovecat}
+                    listButton={listButton}
+                    setListButton={setListButton}
                     />
             </Route>
             <Route path={`${path}/:id`} >
-                <MyPage />
+                <MyPage styleDark={styleDark} />
             </Route>
         </>
     );}

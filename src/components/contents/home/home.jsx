@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import CatList from './catlist';
 
 
-const Home = ({catfetch, onHistoryState, like, setLike, lovecat }) => {
+const Home = ({catfetch, onHistoryState, listButton, setListButton, like, setLike, lovecat }) => {
     const [ initCats, setInitCats ] = useState([]);
     const [ initImage, setInitImage ] = useState([]);
 
@@ -33,6 +33,8 @@ const Home = ({catfetch, onHistoryState, like, setLike, lovecat }) => {
                 like={like} 
                 setLike={setLike}
                 lovecat={lovecat}
+                listButton={listButton}
+                setListButton={setListButton}
             />
             
         </>

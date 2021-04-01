@@ -4,14 +4,14 @@ import CatPicture from './catpicture';
 import LoginModal from './loginmodal';
 import '../../../scss/home.scss'
 
-const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, like, setLike, lovecat }) => {
+const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, listButton, setListButton, like, setLike, lovecat }) => {
     const [catData, setCatData] = useState({
         origin : "Egypt",
         name : "Abyssinian",
         description : "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
         temperament: "Active, Energetic, Independent, Intelligent, Gentle"
     });
-    const [ listButton, setListButton ] = useState(false);
+    
     const [ alretModal, setAlretedModal ] = useState(false);
     
     const onListClick = useCallback(()=>{
@@ -23,13 +23,12 @@ const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, like, setLike
         lovecat(image)
     }
     
-
     return(
         <section>
         <div className="catlistBtn">
             <p>Choice  your cats!</p>
-            <button className="listBtn" onClick={onListClick}>
-                <em>{catData.name}</em>
+            <button className="listBtn" onClick={onListClick} >
+                <em className="listTitle">{catData.name}</em>
                 <span class="material-icons">
                     arrow_drop_down
                 </span>

@@ -1,0 +1,99 @@
+$defaultFont: "ubuntu", sans-serif;
+
+$light-surface1: #ffffff;
+$light-surface2: #f2f2f2;
+$light-surface3: #e6e6e6;
+$light-surface4: #cecece;
+$light-element1: #333333;
+$light-element2: #222222;
+$light-element3: #111111;
+$light-primary: #01408e;
+$light-secondary: #3c5d5c;
+$light-tertiary: #fff7d6;
+
+$dark-surface1: #262626;
+$dark-surface2: #333333;
+$dark-surface3: #404040;
+$dark-surface4: #cecece;
+$dark-element1: #cccccc;
+$dark-element2: #dddddd;
+$dark-element3: #eeeeee;
+$dark-primary: #8fceff;
+$dark-secondary: #72faca;
+$dark-tertiary: #eee8a9;
+
+@mixin theme-colors($light-theme: true) {
+  @if $light-theme {
+    background-color: $light-surface1;
+  } @else {
+    background-color: $dark-surface1;
+  }
+}
+
+@mixin button-colors($light-theme: true) {
+  @if $light-theme {
+    background-color: $light-surface1;
+  } @else {
+    background-color: $dark-surface2;
+  }
+}
+
+@mixin title-colors($light-theme: true) {
+  @if $light-theme {
+    color: $light-primary;
+  } @else {
+    color: $dark-primary;
+  }
+}
+
+@mixin origin-colors($light-theme: true) {
+  @if $light-theme {
+    background-color: $light-primary;
+    color: $dark-element2;
+  } @else {
+    background-color: $dark-primary;
+    color: $light-element2;
+  }
+}
+
+@mixin darktype-colors($light-theme: true) {
+  @if $light-theme {
+    background-color: $light-surface3;
+    color: $light-element2;
+  } @else {
+    background-color: $dark-surface3;
+    color: $dark-surface4;
+  }
+}
+
+@mixin text-colors($light-theme: true) {
+  @if $light-theme {
+    color: $light-element1;
+  } @else {
+    color: $dark-element3;
+  }
+}
+
+@mixin text2-colors($light-theme: true) {
+  @if $light-theme {
+    color: $light-element3;
+  } @else {
+    color: $dark-element3;
+  }
+}
+
+@mixin text3-colors($light-theme: true) {
+  @if $light-theme {
+    color: $light-element2;
+  } @else {
+    color: $dark-element2;
+  }
+}
+
+@mixin text4-colors($light-theme: true) {
+  @if $light-theme {
+    color: $light-element1;
+  } @else {
+    color: $dark-element1;
+  }
+}

@@ -1,0 +1,53 @@
+@import "./scss/reset.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  appearance: none;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  padding: 0;
+}
+
+.Light {
+  @include theme-colors($light-theme: true);
+}
+
+.Dark {
+  @include theme-colors($light-theme: false);
+}
+
+button:focus {
+  outline: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+em {
+  margin: 0;
+  padding: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}

@@ -1,0 +1,65 @@
+@import "./reset.scss";
+
+.Light {
+  .kindlogin {
+    @include button-colors($light-theme: true);
+    button {
+      @include darktype-colors($light-theme: true);
+    }
+  }
+}
+
+.Dark {
+  .kindlogin {
+    @include button-colors($light-theme: false);
+    button {
+      @include darktype-colors($light-theme: false);
+    }
+  }
+  .nologin {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+.logincontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  h1 {
+    font-family: $defaultFont;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 32px;
+    color: #01408e;
+  }
+  .kindlogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 190px;
+    margin-top: 100px;
+
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    button {
+      width: 270px;
+      height: 40px;
+      font-family: $defaultFont;
+
+      border-radius: 20px;
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+  .nologin {
+    margin-top: 40px;
+    font-family: $defaultFont;
+    font-weight: 500;
+    font-size: 16px;
+    color: #c4c4c4;
+  }
+}

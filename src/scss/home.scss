@@ -1,0 +1,251 @@
+@import "./reset.scss";
+
+.Light {
+  .listBtn {
+    @include button-colors($light-theme: true);
+    @include text-colors($light-theme: true);
+    span {
+      @include title-colors($light-theme: true);
+    }
+  }
+  .catsubscribe {
+    border-top: 1px solid #01408e;
+    .origin {
+      @include origin-colors($light-theme: true);
+    }
+    .name {
+      @include text2-colors($light-theme: true);
+    }
+    .subs {
+      @include text3-colors($light-theme: true);
+    }
+    .tempt {
+      @include text4-colors($light-theme: true);
+    }
+  }
+  .options {
+    li {
+      border-bottom: 1px solid #f2f2f2;
+    }
+    button {
+      @include text4-colors($light-theme: true);
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+.Dark {
+  .listBtn {
+    @include button-colors($light-theme: false);
+    @include text-colors($light-theme: false);
+    span {
+      @include title-colors($light-theme: false);
+    }
+  }
+  .catsubscribe {
+    border-top: 1px solid #8fceff;
+    .origin {
+      @include origin-colors($light-theme: false);
+    }
+    .name {
+      @include text2-colors($light-theme: false);
+    }
+    .subs {
+      @include text3-colors($light-theme: false);
+    }
+    .tempt {
+      @include text4-colors($light-theme: false);
+    }
+  }
+  .options {
+    li {
+      border-bottom: 1px solid #646464;
+    }
+    button {
+      @include text4-colors($light-theme: false);
+      background-color: rgba(73, 73, 73, 0.8);
+    }
+  }
+}
+
+.catlistBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 170px;
+  p {
+    width: 290px;
+    text-align: left;
+    font-family: $defaultFont;
+    font-weight: 400;
+    font-size: 16px;
+    color: #cecece;
+  }
+  .listBtn {
+    position: relative;
+    margin-top: 18px;
+    font-family: $defaultFont;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: left;
+    width: 290px;
+    height: 50px;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    em {
+      display: inline-block;
+      padding-left: 20px;
+      height: 100%;
+      line-height: 50px;
+    }
+    span {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+    }
+  }
+  .listOption {
+    z-index: 1000;
+    position: relative;
+    width: 290px;
+    margin-top: 20px;
+    .options {
+      position: absolute;
+      height: 600px;
+      width: 100%;
+      top: 0;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.03);
+      overflow: auto;
+      li {
+        height: 50px;
+        button {
+          font-family: $defaultFont;
+          width: 100%;
+          font-weight: 400;
+          font-size: 18px;
+          text-align: left;
+          line-height: 50px;
+          padding-left: 20px;
+        }
+        &:hover {
+          background-color: #f2f2f2;
+        }
+      }
+    }
+  }
+}
+
+.catpicturelist {
+  margin-top: 60px;
+  overflow: auto;
+  .catslist {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    .listPic {
+      position: relative;
+      img {
+        height: 340px;
+        width: 340px;
+        object-fit: cover;
+      }
+      .like {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 36px;
+        color: maroon;
+      }
+    }
+  }
+}
+
+.catsubscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  padding-bottom: 100px;
+
+  font-family: $defaultFont;
+  .catscontents {
+    width: 400px;
+    margin-top: 30px;
+    .origin {
+      display: inline-block;
+      height: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+      line-height: 28px;
+      border-radius: 15px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+    .name {
+      margin-top: 10px;
+      font-size: 24px;
+      font-weight: 700;
+      padding-left: 10px;
+    }
+    .subs {
+      padding-left: 10px;
+      margin-top: 40px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+    }
+    .tempt {
+      display: inline-block;
+      margin-top: 20px;
+      padding-left: 10px;
+      font-weight: 300;
+      font-size: 16px;
+    }
+  }
+}
+
+.alretModal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  .modalcontents {
+    width: 370px;
+    height: 190px;
+    background: rgba(255, 255, 255, 0.9);
+
+    p {
+      font-family: $defaultFont;
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      padding-top: 35px;
+    }
+    button {
+      width: 130px;
+      height: 43px;
+      line-height: 43px;
+      font-family: $defaultFont;
+      font-size: 18px;
+      border-radius: 21.5px;
+      margin-top: 30px;
+    }
+    .nologin {
+      margin-left: 48px;
+      background-color: #dbd6d6;
+    }
+    .onlogin {
+      margin-left: 10px;
+      background-color: #01408e;
+      color: #ffffff;
+    }
+  }
+}

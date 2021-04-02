@@ -1,0 +1,57 @@
+@import "./reset.scss";
+@import "./layout";
+
+header {
+  font-family: $defaultFont;
+}
+
+.Light {
+  h1 {
+    @include title-colors($light-theme: true);
+  }
+  .login,
+  .personal {
+    @include text-colors($light-theme: true);
+  }
+}
+
+.Dark {
+  h1 {
+    @include title-colors($light-theme: false);
+  }
+  .login,
+  .personal {
+    @include text-colors($light-theme: false);
+  }
+}
+
+.header {
+  display: flex;
+  h1 {
+    padding-top: 30px;
+    padding-left: 140px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 32px;
+    font-style: italic;
+    height: 130px;
+    cursor: default;
+  }
+  .login {
+    font-weight: normal;
+    font-size: 16px;
+    height: 40px;
+    line-height: 35px;
+    margin-top: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  .personalPage {
+    height: 40px;
+    margin-top: 30px;
+    margin-right: 30px;
+    .personal {
+      font-size: 36px;
+    }
+  }
+}

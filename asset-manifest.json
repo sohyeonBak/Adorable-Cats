@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Adorable-Cats/static/css/main.115bf296.chunk.css",
+    "main.js": "/Adorable-Cats/static/js/main.050e22ca.chunk.js",
+    "main.js.map": "/Adorable-Cats/static/js/main.050e22ca.chunk.js.map",
+    "runtime-main.js": "/Adorable-Cats/static/js/runtime-main.074a9163.js",
+    "runtime-main.js.map": "/Adorable-Cats/static/js/runtime-main.074a9163.js.map",
+    "static/js/2.86a4958c.chunk.js": "/Adorable-Cats/static/js/2.86a4958c.chunk.js",
+    "static/js/2.86a4958c.chunk.js.map": "/Adorable-Cats/static/js/2.86a4958c.chunk.js.map",
+    "index.html": "/Adorable-Cats/index.html",
+    "static/css/main.115bf296.chunk.css.map": "/Adorable-Cats/static/css/main.115bf296.chunk.css.map",
+    "static/js/2.86a4958c.chunk.js.LICENSE.txt": "/Adorable-Cats/static/js/2.86a4958c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.074a9163.js",
+    "static/js/2.86a4958c.chunk.js",
+    "static/css/main.115bf296.chunk.css",
+    "static/js/main.050e22ca.chunk.js"
+  ]
+}

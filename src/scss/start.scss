@@ -1,0 +1,41 @@
+@import "./reset.scss";
+
+.starter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .startcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $defaultFont;
+    font-size: 34px;
+    height: 80px;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50px;
+  }
+}
+
+.Light {
+  .startcon {
+    background: linear-gradient(277.43deg, #f1f1f1 6.03%, #e2e2e2 107.3%);
+    color: #01408e;
+  }
+}
+
+.Dark {
+  .startcon {
+    background: linear-gradient(
+      277.43deg,
+      #333333 6.03%,
+      rgba(57, 57, 57, 0.940833) 43.48%,
+      rgba(68, 68, 68, 0.84) 107.3%
+    );
+    color: #8fceff;
+  }
+}

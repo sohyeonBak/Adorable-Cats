@@ -15,7 +15,7 @@ const CatPicture = ({catImage, setAlretedModal, onHistoryState, like, handlerCat
 
     
     return(
-        <li >
+        <li className="listPic">
             <img src={catImage.url} alt={catImage.breeds.id} />
             <span className="material-icons like" onClick={onModalClick} >{onHistoryState===undefined ? `${like}`: `${pickedLikey}` }</span>
         </li>    

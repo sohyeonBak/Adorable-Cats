@@ -18,8 +18,10 @@ function App({catfetch, authservice}) {
 
   return(
     <div className={`App ${styleDark}`} onClick={offlistClick}>
+      
       <BrowserRouter>
         <Switch>
+        
           <Route path="/home" >
             <Contents catfetch={catfetch} listButton={listButton} setListButton={setListButton} styleDark={styleDark} />
           </Route>

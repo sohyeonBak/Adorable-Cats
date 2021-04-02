@@ -4,6 +4,7 @@ import Login from './components/login/login'
 import Contents from "./components/contents/contents";
 import './App.scss'
 import { useState } from "react";
+import Start from "./components/start";
 
 
 function App({catfetch, authservice}) {
@@ -19,13 +20,15 @@ function App({catfetch, authservice}) {
   return(
     <div className={`App ${styleDark}`} onClick={offlistClick}>
       
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
-        
+        <Route exact path="/" >
+            <Start />
+          </Route>
           <Route path="/home" >
             <Contents catfetch={catfetch} listButton={listButton} setListButton={setListButton} styleDark={styleDark} />
           </Route>
-          <Route exact path="/login">
+          <Route  path="/login">
             <Login authservice={authservice} />
           </Route>
         </Switch>

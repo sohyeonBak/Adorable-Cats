@@ -1,4 +1,4 @@
-# Business-Card-Maker
+# Adorable Cats
 
 ## 프로젝트 소개 💡
 

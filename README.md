@@ -34,4 +34,4 @@ TheCatAPI를 이용해 고양이의 이미지와 정보를 불러준다. 고양�
 
 `Netlify page`
 
-- Netlify page : <https://606823e5efe9f201ef520e6d--adorable-cats.netlify.app>
+- Netlify page : <https://6068268135203315c78e9da7--adorable-cats.netlify.app>

@@ -26,12 +26,12 @@ TheCatAPI를 이용해 고양이의 이미지와 정보를 불러준다. 고양�
 
 ### Study 📌
 
-``
+`프로젝트 `
 
-- Velog : <>
+- Velog : <https://velog.io/@sohyeonbak_oly/Adorable-Cats-%EA%B3%A0%EC%96%91%EC%9D%B4-%EC%A0%95%EB%B3%B4-%EC%A0%9C%EA%B3%B5-%ED%8E%98%EC%9D%B4%EC%A7%80>
 
 ### 배포
 
 `Netlify page`
 
-- Netlify page : <https://6068268135203315c78e9da7--adorable-cats.netlify.app>
+- Netlify page : <https://6072dfd099843082c9f58d10--adorable-cats.netlify.app>

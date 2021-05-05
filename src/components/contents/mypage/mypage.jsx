@@ -1,17 +1,17 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import '../../../scss/mypage.scss'
 import CatDetail from './catdetail';
 import LikedCatList from './likedcatlist';
 
-const MyPage = ({styleDark}) => {
+const MyPage = () => {
     const catsHistory = useHistory().location.pickedImage
     const [ listStyle, setListStyle ] = useState(null)
 
     const selected = (cats) => {
         setListStyle(cats)
     }
-    console.log(listStyle)
+    
     return( 
         <section className="saveimage">
             <div className="imagecontents">

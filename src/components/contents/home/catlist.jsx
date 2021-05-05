@@ -18,7 +18,7 @@ const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, listButton, s
     
     const onListClick = useCallback(()=>{
         setListButton(true)
-    },[])
+    },[setListButton])
 
     
     const handlerCats = (image) => {

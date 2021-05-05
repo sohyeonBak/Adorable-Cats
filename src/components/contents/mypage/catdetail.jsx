@@ -4,11 +4,11 @@ const CatDetail = ({selectedCats, selected}) => {
     
     const onList = useCallback(()=>{
         selected(null)
-    },[])
+    },[selected])
 
     return(
         <div className="detailsection">
-            <img src={selectedCats.url} />
+            <img src={selectedCats.url} alt="" />
             <div className="catscontents">
                 <p className="origin">{selectedCats.breeds[0].origin}</p>
                 <h3 className="name">{selectedCats.breeds[0].name}</h3>

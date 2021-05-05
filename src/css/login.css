@@ -1,0 +1,86 @@
+.Light .kindlogin {
+  background-color: #ffffff;
+}
+
+.Light .kindlogin button {
+  background-color: #e6e6e6;
+  color: #222222;
+}
+
+.Dark .kindlogin {
+  background-color: #333333;
+}
+
+.Dark .kindlogin button {
+  background-color: #404040;
+  color: #cecece;
+}
+
+.Dark .nologin {
+  background: rgba(0, 0, 0, 0);
+}
+
+.logincontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.logincontent h1 {
+  font-family: "ubuntu", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 32px;
+  color: #01408e;
+}
+
+.logincontent .kindlogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 360px;
+  height: 190px;
+  margin-top: 100px;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.logincontent .kindlogin button {
+  width: 270px;
+  height: 40px;
+  font-family: "ubuntu", sans-serif;
+  border-radius: 20px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.logincontent .nologin {
+  margin-top: 40px;
+  font-family: "ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #c4c4c4;
+}
+/*# sourceMappingURL=login.css.map */

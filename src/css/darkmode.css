@@ -1,0 +1,35 @@
+.darkmode {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.darkmodeBtn {
+  font-family: "ubuntu", sans-serif;
+  width: 110px;
+  height: 30px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.Light .darkmodeBtn {
+  background: linear-gradient(277.43deg, #ffffff 6.03%, #f2f2f2 107.3%);
+  color: #333333;
+}
+
+.Dark .darkmodeBtn {
+  background: linear-gradient(277.43deg, #333333 6.03%, rgba(57, 57, 57, 0.940833) 43.48%, rgba(68, 68, 68, 0.84) 107.3%);
+  color: #eeeeee;
+}
+
+@media (max-width: 414px) {
+  .darkmode {
+    display: none;
+  }
+}
+/*# sourceMappingURL=darkmode.css.map */

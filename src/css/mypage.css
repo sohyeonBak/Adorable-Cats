@@ -1,0 +1,258 @@
+.Light h2 {
+  color: #333333;
+}
+
+.Light .catscontents .origin {
+  background-color: #01408e;
+  color: #dddddd;
+}
+
+.Light .catscontents .name {
+  color: #111111;
+}
+
+.Light .catscontents .subs {
+  color: #222222;
+}
+
+.Light .catscontents .tempt {
+  color: #333333;
+}
+
+.Dark h2 {
+  color: #eeeeee;
+}
+
+.Dark .catscontents .origin {
+  background-color: #8fceff;
+  color: #222222;
+}
+
+.Dark .catscontents .name {
+  color: #eeeeee;
+}
+
+.Dark .catscontents .subs {
+  color: #dddddd;
+}
+
+.Dark .catscontents .tempt {
+  color: #cccccc;
+}
+
+.saveimage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.saveimage .imagecontents {
+  width: 750px;
+}
+
+.saveimage .imagecontents h2 {
+  font-family: "ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.saveimage .imagecontents .likezone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.saveimage .imagecontents .likezone .detailsection {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 65%;
+          flex: 1 1 65%;
+  font-family: "ubuntu", sans-serif;
+  padding-bottom: 50px;
+}
+
+.saveimage .imagecontents .likezone .detailsection img {
+  width: 95%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.saveimage .imagecontents .likezone .detailsection .catscontents {
+  padding-top: 30px;
+  width: 95%;
+}
+
+.saveimage .imagecontents .likezone .detailsection .catscontents .origin {
+  display: inline-block;
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 28px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.saveimage .imagecontents .likezone .detailsection .catscontents .name {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.saveimage .imagecontents .likezone .detailsection .catscontents .subs {
+  padding-left: 10px;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.saveimage .imagecontents .likezone .detailsection .catscontents .tempt {
+  display: inline-block;
+  margin-top: 20px;
+  padding-left: 10px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.saveimage .imagecontents .likezone .detailsection button {
+  position: relative;
+  margin-top: 30px;
+  margin-left: 10px;
+  padding-left: 15px;
+  margin-bottom: 50px;
+  width: 40%;
+  height: 40px;
+  font-size: 16px;
+  text-align: left;
+  font-family: "ubuntu", sans-serif;
+  background: #e5e5e5;
+}
+
+.saveimage .imagecontents .likezone .detailsection button span {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+}
+
+.saveimage .imagecontents .likezone .listsection {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 35%;
+          flex: 1 1 35%;
+}
+
+.saveimage .imagecontents .likezone .listsection .catimage {
+  font-family: "ubuntu", sans-serif;
+}
+
+.saveimage .imagecontents .likezone .listsection .catimage li {
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  padding-top: 10px;
+}
+
+.saveimage .imagecontents .likezone .listsection .catimage li img {
+  width: 340px;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.saveimage .imagecontents .likezone .listsection .catimage li span {
+  position: absolute;
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 17px;
+  top: 20px;
+  left: 10px;
+  line-height: 30px;
+}
+
+.saveimage .imagecontents .likezone .listsection .catimage .catslist {
+  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.saveimage .imagecontents .likezone .listsection .catimage .catslist img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.saveimage .imagecontents .likezone .listsection .catimage .catslist span {
+  font-size: 12px;
+  top: 10px;
+  height: 28px;
+  line-height: 27px;
+}
+
+@media (max-width: 414px) {
+  .saveimage .imagecontents {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .saveimage .imagecontents h2 {
+    padding-left: 1rem;
+    font-size: 20px;
+  }
+  .saveimage .imagecontents .likezone {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .saveimage .imagecontents .likezone .detailsection {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .saveimage .imagecontents .likezone .detailsection img {
+    width: 100%;
+    height: 340px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .saveimage .imagecontents .likezone .detailsection .catscontents {
+    width: 100%;
+  }
+  .saveimage .imagecontents .likezone .detailsection button {
+    width: 80%;
+  }
+  .saveimage .imagecontents .likezone .listsection {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+  .saveimage .imagecontents .likezone .listsection .catimage .catsgrid {
+    width: 100%;
+    text-align: center;
+  }
+  .saveimage .imagecontents .likezone .listsection .catimage .catsgrid span {
+    left: 30px;
+  }
+  .saveimage .imagecontents .likezone .listsection .catimage .catslist {
+    display: none;
+  }
+}
+/*# sourceMappingURL=mypage.css.map */

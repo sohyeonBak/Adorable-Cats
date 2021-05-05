@@ -1,0 +1,84 @@
+header {
+  font-family: "ubuntu", sans-serif;
+}
+
+.Light h1 {
+  color: #01408e;
+}
+
+.Light .login,
+.Light .personal {
+  color: #333333;
+}
+
+.Dark h1 {
+  color: #8fceff;
+}
+
+.Dark .login,
+.Dark .personal {
+  color: #eeeeee;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header h1 {
+  padding-top: 30px;
+  padding-left: 140px;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 32px;
+  font-style: italic;
+  height: 130px;
+  cursor: default;
+}
+
+.header .login {
+  font-weight: normal;
+  font-size: 16px;
+  height: 40px;
+  line-height: 35px;
+  margin-top: 30px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.header .personalPage {
+  height: 40px;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+.header .personalPage .personal {
+  font-size: 36px;
+}
+
+@media (max-width: 414px) {
+  .header h1 {
+    padding-top: 30px;
+    padding-left: 15px;
+    width: 70%;
+    font-size: 28px;
+    height: 100px;
+  }
+  .header .login {
+    font-size: 14px;
+    margin-right: 0;
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .header .personalPage {
+    margin-right: 15px;
+    width: 10%;
+    text-align: right;
+  }
+  .header .personalPage .personal {
+    font-size: 30px;
+  }
+}
+/*# sourceMappingURL=header.css.map */

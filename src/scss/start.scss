@@ -1,4 +1,5 @@
 @import "./reset.scss";
+@import "./layout";
 
 .starter {
   display: flex;
@@ -18,6 +19,9 @@
     padding-left: 40px;
     padding-right: 40px;
     border-radius: 50px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -37,5 +41,19 @@
       rgba(68, 68, 68, 0.84) 107.3%
     );
     color: #8fceff;
+  }
+}
+
+@include mobile {
+  .starter {
+    .startcon {
+      font-size: 24px;
+      height: 50px;
+      font-style: italic;
+      font-weight: bold;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 50px;
+    }
   }
 }

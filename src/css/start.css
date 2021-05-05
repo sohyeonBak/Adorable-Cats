@@ -1,0 +1,59 @@
+.starter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.starter .startcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "ubuntu", sans-serif;
+  font-size: 34px;
+  height: 80px;
+  font-style: italic;
+  font-weight: bold;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 50px;
+}
+
+.starter .startcon:hover {
+  cursor: pointer;
+}
+
+.Light .startcon {
+  background: linear-gradient(277.43deg, #f1f1f1 6.03%, #e2e2e2 107.3%);
+  color: #01408e;
+}
+
+.Dark .startcon {
+  background: linear-gradient(277.43deg, #333333 6.03%, rgba(57, 57, 57, 0.940833) 43.48%, rgba(68, 68, 68, 0.84) 107.3%);
+  color: #8fceff;
+}
+
+@media (max-width: 414px) {
+  .starter .startcon {
+    font-size: 24px;
+    height: 50px;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+  }
+}
+/*# sourceMappingURL=start.css.map */

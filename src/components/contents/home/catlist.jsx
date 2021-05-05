@@ -54,7 +54,7 @@ const CatList = ({onCatsList, onCatImage, onImage, onHistoryState, listButton, s
             
             <div className="catpicturelist">
                 <ul className="catslist" >
-                    {onCatImage.map(image=>
+                    {onCatImage.map(image=> 
                         <CatPicture 
                             key={image.id} 
                             catImage={image} 

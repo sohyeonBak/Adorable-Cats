@@ -23,8 +23,7 @@ const Home = ({catfetch, onHistoryState, listButton, setListButton, like, setLik
     },[catfetch])
 
     return(
-        <>
-            
+        <>  
             <CatList 
                 onCatsList={initCats} 
                 onImage={onImage} 

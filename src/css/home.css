@@ -1,0 +1,350 @@
+.Light .listBtn {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.Light .listBtn span {
+  color: #01408e;
+}
+
+.Light .catsubscribe {
+  border-top: 1px solid #01408e;
+}
+
+.Light .catsubscribe .origin {
+  background-color: #01408e;
+  color: #dddddd;
+}
+
+.Light .catsubscribe .name {
+  color: #111111;
+}
+
+.Light .catsubscribe .subs {
+  color: #222222;
+}
+
+.Light .catsubscribe .tempt {
+  color: #333333;
+}
+
+.Light .options li {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.Light .options button {
+  color: #333333;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.Dark .listBtn {
+  background-color: #333333;
+  color: #eeeeee;
+}
+
+.Dark .listBtn span {
+  color: #8fceff;
+}
+
+.Dark .catsubscribe {
+  border-top: 1px solid #8fceff;
+}
+
+.Dark .catsubscribe .origin {
+  background-color: #8fceff;
+  color: #222222;
+}
+
+.Dark .catsubscribe .name {
+  color: #eeeeee;
+}
+
+.Dark .catsubscribe .subs {
+  color: #dddddd;
+}
+
+.Dark .catsubscribe .tempt {
+  color: #cccccc;
+}
+
+.Dark .options li {
+  border-bottom: 1px solid #646464;
+}
+
+.Dark .options button {
+  color: #cccccc;
+  background-color: rgba(73, 73, 73, 0.8);
+}
+
+.catlistBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 170px;
+}
+
+.catlistBtn p {
+  width: 290px;
+  text-align: left;
+  font-family: "ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #cecece;
+}
+
+.catlistBtn .listBtn {
+  position: relative;
+  margin-top: 18px;
+  font-family: "ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+  width: 290px;
+  height: 50px;
+  -webkit-box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.catlistBtn .listBtn em {
+  display: inline-block;
+  padding-left: 20px;
+  height: 100%;
+  line-height: 50px;
+}
+
+.catlistBtn .listBtn span {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+.catlistBtn .listOption {
+  z-index: 1000;
+  position: relative;
+  width: 290px;
+  margin-top: 20px;
+}
+
+.catlistBtn .listOption .options {
+  position: absolute;
+  height: 600px;
+  width: 100%;
+  top: 0;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.03);
+  overflow: auto;
+}
+
+.catlistBtn .listOption .options li {
+  height: 50px;
+}
+
+.catlistBtn .listOption .options li button {
+  font-family: "ubuntu", sans-serif;
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+  line-height: 50px;
+  padding-left: 20px;
+}
+
+.catlistBtn .listOption .options li:hover {
+  background-color: #f2f2f2;
+}
+
+.catpicturelist {
+  margin-top: 60px;
+  overflow: auto;
+}
+
+.catpicturelist .catslist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.catpicturelist .catslist .listPic {
+  position: relative;
+}
+
+.catpicturelist .catslist .listPic img {
+  height: 340px;
+  width: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.catpicturelist .catslist .listPic .like {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 36px;
+  color: maroon;
+}
+
+.catsubscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 80px;
+  padding-bottom: 100px;
+  font-family: "ubuntu", sans-serif;
+}
+
+.catsubscribe .catscontents {
+  width: 400px;
+  margin-top: 30px;
+}
+
+.catsubscribe .catscontents .origin {
+  display: inline-block;
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 28px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.catsubscribe .catscontents .name {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.catsubscribe .catscontents .subs {
+  padding-left: 10px;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.catsubscribe .catscontents .tempt {
+  display: inline-block;
+  margin-top: 20px;
+  padding-left: 10px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.alretModal {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.alretModal .modalcontents {
+  width: 370px;
+  height: 190px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.alretModal .modalcontents p {
+  font-family: "ubuntu", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding-top: 35px;
+}
+
+.alretModal .modalcontents button {
+  width: 130px;
+  height: 43px;
+  line-height: 43px;
+  font-family: "ubuntu", sans-serif;
+  font-size: 18px;
+  border-radius: 21.5px;
+  margin-top: 30px;
+}
+
+.alretModal .modalcontents .nologin {
+  margin-left: 48px;
+  background-color: #dbd6d6;
+}
+
+.alretModal .modalcontents .onlogin {
+  margin-left: 10px;
+  background-color: #01408e;
+  color: #ffffff;
+}
+
+@media (max-width: 414px) {
+  .catlistBtn {
+    height: 150px;
+  }
+  .catlistBtn p {
+    font-size: 16px;
+  }
+  .catpicturelist {
+    margin-top: 40px;
+  }
+  .catpicturelist .catslist .listPic img {
+    height: 300px;
+    width: 300px;
+  }
+  .catpicturelist .catslist .listPic .like {
+    font-size: 32px;
+  }
+  .catsubscribe .catscontents {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .catsubscribe .catscontents .origin {
+    height: 28px;
+    padding-left: 12px;
+    padding-right: 12px;
+    line-height: 26px;
+    font-size: 14px;
+  }
+  .catsubscribe .catscontents .name {
+    font-size: 21px;
+  }
+}
+/*# sourceMappingURL=home.css.map */

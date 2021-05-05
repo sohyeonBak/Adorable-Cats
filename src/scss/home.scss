@@ -1,4 +1,5 @@
 @import "./reset.scss";
+@import "./layout";
 
 .Light {
   .listBtn {
@@ -246,6 +247,48 @@
       margin-left: 10px;
       background-color: #01408e;
       color: #ffffff;
+    }
+  }
+}
+
+@include mobile {
+  .catlistBtn {
+    height: 150px;
+    p {
+      font-size: 16px;
+    }
+  }
+  .catpicturelist {
+    margin-top: 40px;
+    .catslist {
+      .listPic {
+        img {
+          height: 300px;
+          width: 300px;
+        }
+        .like {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  .catsubscribe {
+    .catscontents {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      box-sizing: border-box;
+      .origin {
+        height: 28px;
+        padding-left: 12px;
+        padding-right: 12px;
+        line-height: 26px;
+        font-size: 14px;
+      }
+      .name {
+        font-size: 21px;
+      }
     }
   }
 }

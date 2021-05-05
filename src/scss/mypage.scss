@@ -1,4 +1,5 @@
 @import "./reset.scss";
+@import "./layout";
 
 .Light {
   h2 {
@@ -58,7 +59,6 @@
         flex: 1 1 65%;
         font-family: $defaultFont;
         padding-bottom: 50px;
-        height: 100vh;
         img {
           width: 95%;
           height: 500px;
@@ -170,58 +170,54 @@
   }
 }
 
-// .saveimage {
-//   display: flex;
-//   justify-content: center;
-//   .imagecontents {
-//     width: 700px;
-//     h2 {
-//       font-family: $defaultFont;
-//       font-weight: 500;
-//       font-size: 24px;
-//       color: #333;
-//     }
-//     .catimage {
-//       margin-top: 20px;
-//       font-family: $defaultFont;
-//       li {
-//         position: relative;
-//         display: inline-block;
-//         width: 50%;
-//         padding-top: 10px;
-//         img {
-//           width: 340px;
-//           height: 340px;
-//           object-fit: cover;
-//         }
-//         span {
-//           position: absolute;
-//           display: inline-block;
-//           padding-left: 10px;
-//           padding-right: 10px;
-//           height: 34px;
-//           background: rgba(255, 255, 255, 0.78);
-//           border-radius: 17px;
-//           top: 20px;
-//           left: 10px;
-//           line-height: 30px;
-//         }
-//       }
-//       .catsgird {
-//       }
-//       .catslist {
-//         display: block;
-//         img {
-//           width: 200px;
-//           height: 200px;
-//           object-fit: cover;
-//         }
-//         span {
-//           font-size: 12px;
-//           height: 28px;
-//           line-height: 27px;
-//         }
-//       }
-//     }
-//   }
-// }
+@include mobile {
+  .saveimage {
+    .imagecontents {
+      width: 100%;
+      box-sizing: border-box;
+      h2 {
+        padding-left: 1rem;
+        font-size: 20px;
+      }
+      .likezone {
+        flex-direction: column;
+        .detailsection {
+          flex: none;
+          width: 100%;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          box-sizing: border-box;
+          img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+          }
+          .catscontents {
+            width: 100%;
+          }
+          button {
+            width: 80%;
+          }
+        }
+
+        .listsection {
+          flex: none;
+
+          .catimage {
+            .catsgrid {
+              width: 100%;
+              text-align: center;
+              span {
+                left: 30px;
+              }
+            }
+
+            .catslist {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

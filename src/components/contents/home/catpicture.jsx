@@ -2,8 +2,7 @@ import React, { useCallback, useState } from 'react';
 
 const CatPicture = ({catImage, setAlretedModal, onHistoryState, like, handlerCats }) => {
     const [pickedLikey, setPickedLikey] = useState('favorite_border')
-    
-    const onModalClick = useCallback((e)=>{
+    const onModalClick = useCallback(()=>{
         if(onHistoryState===undefined){
             setAlretedModal(true)
         } else {

@@ -44,7 +44,7 @@
 .saveimage {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 1000px;
   .imagecontents {
     width: 750px;
     h2 {
@@ -55,6 +55,7 @@
     .likezone {
       display: flex;
       margin-top: 20px;
+
       .detailsection {
         flex: 1 1 65%;
         font-family: $defaultFont;
